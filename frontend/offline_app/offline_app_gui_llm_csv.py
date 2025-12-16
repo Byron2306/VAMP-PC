@@ -61,8 +61,6 @@ from tkinter import ttk, filedialog, messagebox
 # We therefore add the repo root (the folder that contains /backend) to sys.path.
 # ---------------------------
 import importlib
-import importlib.machinery
-import importlib.util
 import sys
 
 def _ensure_repo_root_on_sys_path() -> Path:
@@ -100,23 +98,10 @@ def _import_with_path_fallback(module_name: str, *, fallback_path: Optional[Path
         return importlib.import_module(module_name)
     except ModuleNotFoundError as first_error:
         if fallback_path and fallback_path.exists():
-            package_name, has_sep, _ = module_name.rpartition(".")
-            if has_sep and package_name and package_name not in sys.modules:
-                # Ensure the package exists so relative imports in the module do not fail.
-                package_spec = importlib.machinery.ModuleSpec(
-                    package_name,
-                    loader=None,
-                    is_package=True,
-                )
-                package = importlib.util.module_from_spec(package_spec)
-                package.__path__ = [str((REPO_ROOT / package_name.replace(".", "/")).resolve())]  # type: ignore[attr-defined]
-                sys.modules[package_name] = package
-
-            loader = importlib.machinery.SourceFileLoader(module_name, str(fallback_path))
-            spec = importlib.util.spec_from_loader(module_name, loader)
+            spec = importlib.util.spec_from_file_location(module_name, fallback_path)
             if spec and spec.loader:
                 module = importlib.util.module_from_spec(spec)
-                loader.exec_module(module)  # type: ignore[attr-defined]
+                spec.loader.exec_module(module)  # type: ignore[attr-defined]
                 sys.modules[module_name] = module
                 return module
         raise first_error
