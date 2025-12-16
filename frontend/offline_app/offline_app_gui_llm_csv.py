@@ -60,6 +60,9 @@ from tkinter import ttk, filedialog, messagebox
 # Python sets sys.path[0] to this script's folder, NOT the repo root.
 # We therefore add the repo root (the folder that contains /backend) to sys.path.
 # ---------------------------
+import importlib
+import importlib.machinery
+import importlib.util
 import sys
 
 def _ensure_repo_root_on_sys_path() -> Path:
@@ -79,6 +82,46 @@ def _ensure_repo_root_on_sys_path() -> Path:
 REPO_ROOT = _ensure_repo_root_on_sys_path()
 
 
+def _import_with_path_fallback(module_name: str, *, fallback_path: Optional[Path] = None):
+    """Import ``module_name`` with an optional direct-path fallback.
+
+    On some Windows setups the repo root is not injected into ``sys.path`` when
+    launching via ``python frontend\\offline_app\\offline_app_gui_llm_csv.py``.
+    We first ensure the repo root is present, then try a standard import. If that
+    still fails, we attempt a direct file-based import using ``fallback_path``.
+    """
+
+    # Make sure the repo root stays first so local backend wins over any
+    # site-packages module named "backend".
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+
+    try:
+        return importlib.import_module(module_name)
+    except ModuleNotFoundError as first_error:
+        if fallback_path and fallback_path.exists():
+            package_name, has_sep, _ = module_name.rpartition(".")
+            if has_sep and package_name and package_name not in sys.modules:
+                # Ensure the package exists so relative imports in the module do not fail.
+                package_spec = importlib.machinery.ModuleSpec(
+                    package_name,
+                    loader=None,
+                    is_package=True,
+                )
+                package = importlib.util.module_from_spec(package_spec)
+                package.__path__ = [str((REPO_ROOT / package_name.replace(".", "/")).resolve())]  # type: ignore[attr-defined]
+                sys.modules[package_name] = package
+
+            loader = importlib.machinery.SourceFileLoader(module_name, str(fallback_path))
+            spec = importlib.util.spec_from_loader(module_name, loader)
+            if spec and spec.loader:
+                module = importlib.util.module_from_spec(spec)
+                loader.exec_module(module)  # type: ignore[attr-defined]
+                sys.modules[module_name] = module
+                return module
+        raise first_error
+
+
 try:
     from PIL import Image, ImageTk  # type: ignore
 except Exception:
@@ -89,13 +132,16 @@ except Exception:
 # Backend imports (expected)
 # ---------------------------
 try:
-    from backend.staff_profile import (
-        StaffProfile,
-        create_or_load_profile,
-        staff_is_director_level,
-    )  # type: ignore
+    staff_profile_mod = _import_with_path_fallback(
+        "backend.staff_profile", fallback_path=REPO_ROOT / "backend" / "staff_profile.py"
+    )
+    StaffProfile = staff_profile_mod.StaffProfile  # type: ignore[attr-defined]
+    create_or_load_profile = staff_profile_mod.create_or_load_profile  # type: ignore[attr-defined]
+    staff_is_director_level = staff_profile_mod.staff_is_director_level  # type: ignore[attr-defined]
 except Exception as e:
-    raise RuntimeError("Missing backend.staff_profile. Please ensure you're running from the repo root.") from e
+    raise RuntimeError(
+        "Missing backend.staff_profile. Please ensure you're running from the repo root or set PYTHONPATH to the repo."
+    ) from e
 
 try:
     from backend.contracts.task_agreement_import import import_task_agreement_excel  # type: ignore
@@ -2718,5 +2764,21 @@ class OfflineApp(tk.Tk):
             self._refresh_button_states()
 
 if __name__ == "__main__":
-    app = OfflineApp()
-    app.mainloop()
+    try:
+        # Tk needs a display server; in headless terminals $DISPLAY is empty and
+        # Tkinter raises a TclError before the window is even created. Fail fast
+        # with a clearer error so the launch issue is obvious to users running
+        # without X/Wayland.
+        if sys.platform.startswith("linux") and not (
+            os.environ.get("DISPLAY") or os.environ.get("WAYLAND_DISPLAY")
+        ):
+            raise RuntimeError(
+                "No graphical display detected. The Tkinter GUI requires an X/Wayland "
+                "session. Set DISPLAY or run via xvfb/desktop before launching."
+            )
+
+        app = OfflineApp()
+        app.mainloop()
+    except Exception as exc:  # noqa: BLE001 - surface clear launch guidance
+        print(f"Failed to start OfflineApp: {exc}", file=sys.stderr)
+        sys.exit(1)
