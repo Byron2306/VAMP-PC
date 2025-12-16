@@ -1,0 +1,363 @@
+{
+  "staff_id": "unknown_staff",
+  "cycle_year": "unknown_year",
+  "total_weight_pct": 100.00000000000001,
+  "valid": true,
+  "kpas": {
+    "KPA2": {
+      "code": "KPA2",
+      "name": "Personal Research, Innovation and/or Creative Outputs",
+      "hours": 370.0,
+      "weight_pct": 17.05076981921576,
+      "outputs": [],
+      "kpis": [],
+      "outcomes": [],
+      "active": true,
+      "context": {
+        "modules": [
+          "HISE322",
+          "HISE411"
+        ],
+        "name": "Personal Research, Innovation and/or Creative Outputs",
+        "hours": 370.0,
+        "weight_pct": 22.18,
+        "norm_hours": 1728.0,
+        "ohs": [
+          "Level Up Learning: Enhancing Self-Directed Learning in Computer Applications Technology with Classcraft",
+          "Game-Based Learning in History Education: Insights from “Dogs of War”",
+          "Revitalizing Classrooms: Integrating Indigenous Knowledge and Ubuntu in Social Sciences Education"
+        ]
+      },
+      "source_sheet": "Task Agreement Form",
+      "row_number": 61,
+      "status": "OK",
+      "validation_note": null
+    },
+    "KPA1": {
+      "code": "KPA1",
+      "name": "Teaching and Learning, including Higher Degree Supervision",
+      "hours": 872.99,
+      "weight_pct": 40.23013930939775,
+      "outputs": [],
+      "kpis": [],
+      "outcomes": [],
+      "active": true,
+      "context": {
+        "name": "Teaching and Learning (including supervision)",
+        "hours": 792.99,
+        "weight_pct": 47.54,
+        "teaching_modules": [
+          "HISE322",
+          "HISE411"
+        ],
+        "norm_hours": 1728.0,
+        "teaching": [
+          "D. Olivier CRSE 971",
+          "ST. Dinga CRSE 971",
+          "N. van Deventer CRSE 971",
+          "M. Bouwer CRSE 971",
+          "ERTP 671 / LERP 671 1",
+          "HISE 322 40",
+          "HISE 411 35",
+          "Presentation: 1 hour per presentation",
+          "Preparation: 1 hour per presentation",
+          "Facilitator: 1 hour per presentation (assisting presenter)",
+          "Material development: 5 hours per theme"
+        ],
+        "supervision": [
+          "C. Choba",
+          "S. Manana",
+          "V van Rensberg",
+          "P. Motsosi"
+        ],
+        "teaching_practice_windows": [
+          "April",
+          "July"
+        ]
+      },
+      "source_sheet": "Task Agreement Form",
+      "row_number": 306,
+      "status": "OK",
+      "validation_note": null
+    },
+    "KPA3": {
+      "code": "KPA3",
+      "name": "Social Responsiveness and Industry Involvement",
+      "hours": 30.0,
+      "weight_pct": 1.3824948502066832,
+      "outputs": [],
+      "kpis": [],
+      "outcomes": [],
+      "active": true,
+      "context": {
+        "name": "Social Responsiveness (Community Engagement / Industry)",
+        "hours": 30.0,
+        "weight_pct": 1.8,
+        "norm_hours": 1728.0,
+        "research": [
+          "Prosper GREAT project",
+          "Citesaga project, Renewable Rangers project",
+          "ECGBL",
+          "SDL",
+          "Play with purpose, B Bunt and L Bunt, SDL OEP book for 2025",
+          "Open Educational Practices (OEPs) in the Era of the Fourth Industrial Revolution (4IR): Empowering Self-Directed Learning (SDL)",
+          "ERTP/LERP Research proposals (2 assignments) @ 30min (0,5 hours) per student 2",
+          "ERTP/LERP Research reports @ 2 hours per student 2",
+          "SASHT website management",
+          "SASHT webinar coordination",
+          "Ntombiyoxolo Mqadi",
+          "Dawid Olivier",
+          "Attendance of research colloquims, writing schools, workshops (eg. Ethics, Integrity, Turnitin): Maximum of 60 hours",
+          "Play-based SDL sub area leader",
+          "HISE 411, HISE 322"
+        ]
+      },
+      "source_sheet": "Task Agreement Form",
+      "row_number": 315,
+      "status": "OK",
+      "validation_note": null
+    },
+    "KPA4": {
+      "code": "KPA4",
+      "name": "Academic Leadership, Management and Administration",
+      "hours": 895.0,
+      "weight_pct": 41.244429697832715,
+      "outputs": [],
+      "kpis": [],
+      "outcomes": [],
+      "active": true,
+      "context": {
+        "name": "Academic Leadership and Administration",
+        "hours": 475.0,
+        "weight_pct": 28.48,
+        "norm_hours": 1728.0,
+        "leadership": [
+          "SDL scientific committee 5",
+          "Faculty Board: 12 hours",
+          "Teaching and Learning Committee: 18 hours",
+          "Scientific Committee meetings: 55 hours per entity",
+          "Entity Exco meetings: 30 hours",
+          "Research Focus Area/Unit Management Committee meetings: \nMaximum of 20 hours",
+          "Research Focus Area/Entity meetings: Maximum of 10 hours",
+          "Mentorship meetings: 8 hours",
+          "School Management Committee: 24 hours",
+          "Subject Group meetings: 22 hours",
+          "School meetings and functions: 10 hours",
+          "Faculty Forums: Maximum of 6 hours",
+          "Professional development (in accordance with PDP): Maximum of 10 hours",
+          "SASHT exco committee"
+        ]
+      },
+      "source_sheet": "Task Agreement Form",
+      "row_number": 374,
+      "status": "OK",
+      "validation_note": null
+    },
+    "KPA5": {
+      "code": "KPA5",
+      "name": "OHS",
+      "hours": 2.0,
+      "weight_pct": 0.09216632334711221,
+      "outputs": [],
+      "kpis": [],
+      "outcomes": [],
+      "active": true,
+      "context": {
+        "norm_hours": 1728.0
+      },
+      "source_sheet": "Task Agreement Form",
+      "row_number": 379,
+      "status": "OK",
+      "validation_note": null
+    }
+  },
+  "status": "OK",
+  "validation_errors": [],
+  "snapshot": {
+    "sheet": "Task Agreement Form",
+    "grand_totals": [
+      {
+        "section": 1,
+        "sheet": "Task Agreement Form",
+        "row_number": 61,
+        "label": "GRAND TOTAL: SECTION 1",
+        "hours_raw": 370,
+        "weight_raw": 17.05076981921576,
+        "hours": 370.0,
+        "weight_pct": 17.05076981921576
+      },
+      {
+        "section": 2,
+        "sheet": "Task Agreement Form",
+        "row_number": 306,
+        "label": "GRAND TOTAL: SECTION 2",
+        "hours_raw": 872.99,
+        "weight_raw": 40.23013930939775,
+        "hours": 872.99,
+        "weight_pct": 40.23013930939775
+      },
+      {
+        "section": 3,
+        "sheet": "Task Agreement Form",
+        "row_number": 315,
+        "label": "GRAND TOTAL: SECTION 3",
+        "hours_raw": 30,
+        "weight_raw": 1.3824948502066832,
+        "hours": 30.0,
+        "weight_pct": 1.3824948502066832
+      },
+      {
+        "section": 4,
+        "sheet": "Task Agreement Form",
+        "row_number": 374,
+        "label": "GRAND TOTAL: SECTION 4",
+        "hours_raw": 475,
+        "weight_raw": 21.88950179493915,
+        "hours": 475.0,
+        "weight_pct": 21.88950179493915
+      },
+      {
+        "section": 5,
+        "sheet": "Task Agreement Form",
+        "row_number": 379,
+        "label": "GRAND TOTAL: SECTION 5",
+        "hours_raw": 2,
+        "weight_raw": 0.09216632334711221,
+        "hours": 2.0,
+        "weight_pct": 0.09216632334711221
+      },
+      {
+        "section": 6,
+        "sheet": "Task Agreement Form",
+        "row_number": 383,
+        "label": "GRAND TOTAL: SECTION 6",
+        "hours_raw": 420,
+        "weight_raw": 19.354927902893564,
+        "hours": 420.0,
+        "weight_pct": 19.354927902893564
+      }
+    ],
+    "section_totals": [
+      {
+        "section": 1,
+        "sheet": "Task Agreement Form",
+        "row_number": 61,
+        "label": "GRAND TOTAL: SECTION 1",
+        "hours_raw": 370,
+        "weight_raw": 17.05076981921576,
+        "hours": 370.0,
+        "weight_pct": 17.05076981921576
+      },
+      {
+        "section": 2,
+        "sheet": "Task Agreement Form",
+        "row_number": 306,
+        "label": "GRAND TOTAL: SECTION 2",
+        "hours_raw": 872.99,
+        "weight_raw": 40.23013930939775,
+        "hours": 872.99,
+        "weight_pct": 40.23013930939775
+      },
+      {
+        "section": 3,
+        "sheet": "Task Agreement Form",
+        "row_number": 315,
+        "label": "GRAND TOTAL: SECTION 3",
+        "hours_raw": 30,
+        "weight_raw": 1.3824948502066832,
+        "hours": 30.0,
+        "weight_pct": 1.3824948502066832
+      },
+      {
+        "section": 4,
+        "sheet": "Task Agreement Form",
+        "row_number": 374,
+        "label": "GRAND TOTAL: SECTION 4",
+        "hours_raw": 475,
+        "weight_raw": 21.88950179493915,
+        "hours": 475.0,
+        "weight_pct": 21.88950179493915
+      },
+      {
+        "section": 5,
+        "sheet": "Task Agreement Form",
+        "row_number": 379,
+        "label": "GRAND TOTAL: SECTION 5",
+        "hours_raw": 2,
+        "weight_raw": 0.09216632334711221,
+        "hours": 2.0,
+        "weight_pct": 0.09216632334711221
+      },
+      {
+        "section": 6,
+        "sheet": "Task Agreement Form",
+        "row_number": 383,
+        "label": "GRAND TOTAL: SECTION 6",
+        "hours_raw": 420,
+        "weight_raw": 19.354927902893564,
+        "hours": 420.0,
+        "weight_pct": 19.354927902893564
+      }
+    ],
+    "modules": [
+      "HISE322",
+      "HISE411"
+    ],
+    "ta_parse_report": {
+      "1": {
+        "blocks_detected": [
+          "committee_roles",
+          "research_block"
+        ],
+        "rows_consumed": 10,
+        "rows_unconsumed": 0,
+        "unconsumed_examples": []
+      },
+      "2": {
+        "blocks_detected": [
+          "committee_roles",
+          "module_table",
+          "research_block",
+          "supervision",
+          "teaching_practice_windows"
+        ],
+        "rows_consumed": 19,
+        "rows_unconsumed": 0,
+        "unconsumed_examples": []
+      },
+      "3": {
+        "blocks_detected": [],
+        "rows_consumed": 2,
+        "rows_unconsumed": 0,
+        "unconsumed_examples": []
+      },
+      "4": {
+        "blocks_detected": [
+          "committee_roles",
+          "research_block"
+        ],
+        "rows_consumed": 18,
+        "rows_unconsumed": 0,
+        "unconsumed_examples": []
+      },
+      "5": {
+        "blocks_detected": [
+          "committee_roles",
+          "ohs_block"
+        ],
+        "rows_consumed": 0,
+        "rows_unconsumed": 0,
+        "unconsumed_examples": []
+      },
+      "6": {
+        "blocks_detected": [],
+        "rows_consumed": 0,
+        "rows_unconsumed": 0,
+        "unconsumed_examples": []
+      }
+    },
+    "norm_hours": 1728.0,
+    "total_hours": 2169.99,
+    "ta_warnings": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "KPA1": {
+    "Delivery & Coordination": [
+      "Effective coordination and delivery of approved undergraduate and/or postgraduate modules",
+      "Alignment of teaching practices with approved curricula and learning outcomes",
+      "Maintenance of current learning materials and learning activities on eFundi or approved NWU LMS",
+      "Use of structured learning pathways and communication to support student engagement and completion"
+    ],
+    "Assessment & Moderation": [
+      "Quality and compliance of assessment design, moderation and feedback practices",
+      "Timely and accurate assessment and moderation in accordance with faculty guidelines",
+      "Evidence-based assessment improvement through moderation findings and reflection"
+    ],
+    "Student Support & Supervision": [
+      "Effective supervision and academic support of students (undergraduate/postgraduate)",
+      "Contribution to student throughput, retention and academic development",
+      "Implementation of structured consultation, support and referral mechanisms"
+    ],
+    "Pedagogical Innovation": [
+      "Integration of innovative, blended or technology-enhanced teaching practices",
+      "Continuous improvement of teaching approaches informed by evaluation and reflection"
+    ],
+    "Quality Assurance": [
+      "Participation in module evaluation, review and continuous improvement processes",
+      "Contribution to programme review, accreditation readiness and teaching quality reporting"
+    ]
+  },
+  "KPA2": {
+    "Research Outputs": [
+      "Production of accredited research outputs aligned with institutional targets",
+      "Contribution to peer-reviewed publications, books or conference outputs",
+      "Production of research-informed scholarly resources (where applicable)"
+    ],
+    "Postgraduate Supervision": [
+      "Effective supervision and progression of postgraduate students",
+      "Contribution to postgraduate throughput and completion"
+    ],
+    "Research Engagement": [
+      "Participation in research projects, collaborations or scholarly networks",
+      "Engagement in research capacity development activities"
+    ],
+    "Funding & Recognition": [
+      "Submission or acquisition of research funding or grants (where applicable)",
+      "Recognition through citations, peer review, editorial work or scholarly impact"
+    ]
+  },
+  "KPA3": {
+    "Community Engagement / Social Responsiveness": [
+      "Meaningful engagement with communities aligned to disciplinary expertise",
+      "Integration of community engagement into teaching or research activities",
+      "Contribution to socially responsive projects or partnerships",
+      "Documentation and reporting of community engagement outcomes"
+    ]
+  },
+  "KPA4": {
+    "Academic Leadership & Administration": [
+      "Effective participation in academic committees or governance structures",
+      "Contribution to programme, school or faculty administration",
+      "Leadership in curriculum development, quality assurance or academic planning",
+      "Support of institutional initiatives and strategic objectives"
+    ]
+  },
+  "KPA5": {
+    "OHS": [
+      "Compliance with institutional Occupational Health and Safety requirements"
+    ]
+  }
+}
